@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<title>Pro eindige getallen converter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta content="nl" http-equiv="Content-Language">
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class='container'>
+		<div class='row'>
+			<div class="span6">
+				<h2>Pro-eindig naar geheel</h2>
+				<p>
+					Voer in het eerste vak een pro-eindig getal in. De getallen van het pro-eindige getal scheid je met een spatie (zoals in het voorbeeld).<br />
+					Test: pro-eindig getal 3 2 1 moet 23 worden.
+				</p>
+				<form id='contactForm' class="form-vertical">
+					<div id='profinite-number-group' class="control-group">
+						<label class="control-label" for="profinite-number">
+							Pro-eindig getal
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge profinite-number" style='width: 95%;' value='3 2 1'>
+							<span class="help-inline"></span>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success" style='margin-bottom: 1em;' id='convertProFinite'>Converteren</button>
+
+					<div id='integer-group' class="control-group">
+						<label class="control-label" for="integer">
+							Geheel getal
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge integer" style='width: 95%;'>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="span6">
+				<h2>Geheel naar pro-eindig</h2>
+				<p>
+					Voer in het eerste vak een geheel getal in. Het resultaat is een pro-eindig getal waarbij de getallen gescheiden zijn met een spatie.<br />
+					Test: geheel getal 23 moet 3 2 1 worden.
+				</p>
+				<form id='contactForm' class="form-vertical">
+					<div id='integer-group' class="control-group">
+						<label class="control-label" for="integer">
+							Geheel getal
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge integer" style='width: 95%;' value='23'>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success" style='margin-bottom: 1em;' id='convertInteger'>Converteren</button>
+
+					<div id='profinite-number-group' class="control-group">
+						<label class="control-label" for="profinite-number">
+							Pro-eindig getal
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge profinite-number" style='width: 95%;'>
+						</div>
+					</div>
+				
+				</form>
+			</div>
+		</div>
+
+
+		<div class='row'>
+			<div class="span6">
+				<h2>Pro-eindige getallen optellen</h2>
+				<p>
+					Voer in het eerste vak een pro-eindig getal in. De getallen van het pro-eindige getal scheid je met een spatie (zoals in het voorbeeld).<br />
+					Test: pro-eindig getal 3 2 1 moet 23 worden.
+				</p>
+				<form id='contactForm' class="form-vertical">
+					<div id='profinite-number-group' class="control-group">
+						<div class="controls">
+							<input type="text" class="input-xlarge profinite-number" style='width: 45%;' value='3 2 1'>
+						+
+							<input type="text" class="input-xlarge profinite-number" style='width: 45%;' value='3 2 1'>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success" style='margin-bottom: 1em;' id='addProFinite'>Optellen</button>
+
+					<div id='integer-group' class="control-group">
+						<label class="control-label" for="integer">
+							Resultaat
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge result" style='width: 95%;'>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="span6">
+				<h2>Pro-eindige getallen aftrekken</h2>
+				<p>
+					Voer in het eerste vak een pro-eindig getal in. De getallen van het pro-eindige getal scheid je met een spatie (zoals in het voorbeeld).<br />
+					Test: pro-eindig getal 3 2 1 moet 23 worden.
+				</p>
+				<form id='contactForm' class="form-vertical">
+					<div id='profinite-number-group' class="control-group">
+						<div class="controls">
+							<input type="text" class="input-xlarge profinite-number" style='width: 45%;' value='1 0 0 0'>
+						-
+							<input type="text" class="input-xlarge profinite-number" style='width: 45%;' value='3 2 1'>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success" style='margin-bottom: 1em;' id='subtractProFinite'>Aftrekken</button>
+
+					<div id='integer-group' class="control-group">
+						<label class="control-label" for="integer">
+							Resultaat
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge result" style='width: 95%;'>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class='row'>
+			<div class="span6">
+				<h2>Pro-eindige getallen vermenigvuldigen</h2>
+				<form id='contactForm' class="form-vertical">
+					<div id='profinite-number-group' class="control-group">
+						<div class="controls">
+							<input type="text" class="input-xlarge profinite-number" style='width: 45%;' value='3 2 1'>
+						*
+							<input type="text" class="input-xlarge profinite-number" style='width: 45%;' value='3 2 1'>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success" style='margin-bottom: 1em;' id='multiplyProFinite'>Vermedigvuldigen</button>
+
+					<div id='integer-group' class="control-group">
+						<label class="control-label" for="integer">
+							Resultaat
+						</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge result" style='width: 95%;'>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src='jquery.js'></script>
+	<script src="proeindig.js"></script>
+	</body>
+</html>n
